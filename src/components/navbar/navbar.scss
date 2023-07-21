@@ -1,0 +1,39 @@
+header {
+  .navbar {
+    width: 95%;
+    height: 100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .navbar__logotype {
+      font-family: "mf", sans-serif;
+      font-size: 36px;
+    }
+    .navbar__list {
+      border: 1px solid #141414;
+      border-radius: 25px;
+      padding: 0.5em 1em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      .navbar__item {
+        transition: 250ms;
+        &:hover {
+          color: #7e7e7e;
+        }
+      }
+    }
+    .navbar__bookTrip {
+      background-color: #141414;
+      color: #fff;
+      border-radius: 25px;
+      padding: 0.5em 1em;
+      transition: 250ms;
+      &:hover {
+        background-color: #7e7e7e;
+      }
+    }
+  }
+}

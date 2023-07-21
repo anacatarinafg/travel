@@ -1,0 +1,93 @@
+.home {
+  width: 95%;
+  margin: auto;
+  .home__content {
+    display: flex;
+    justify-content: center;
+    height: 85vh;
+  }
+  .home__info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    margin-top: 105px;
+    .home__headline {
+      width: 600px;
+      font-size: 92px;
+      text-transform: capitalize;
+      font-weight: 400;
+    }
+    .home__paragraph {
+      font-size: 22px;
+      width: 400px;
+      text-align: justify;
+    }
+  }
+  .home__trip {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    .home__tripLink {
+      width: 120px;
+      background-color: #141414;
+      color: #fff;
+      padding: 1em;
+      border-radius: 10px;
+      text-align: center;
+    }
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-weight: 700;
+      text-transform: capitalize;
+      .home__tripIcon {
+        font-size: 36px;
+      }
+    }
+  }
+  .home__quote {
+    display: flex;
+    position: relative;
+    img {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      object-fit: cover;
+      &:nth-child(2) {
+        position: absolute;
+        left: 30px;
+      }
+    }
+    .home__phrase {
+      width: 350px;
+      margin-left: 60px;
+      text-align: justify;
+    }
+  }
+  .home__images {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    position: relative;
+    img {
+      width: 350px;
+      height: 500px;
+      border-radius: 10px;
+      &:nth-child(1) {
+        position: absolute;
+        top: 55px;
+        left: 450px;
+      }
+      &:nth-child(2) {
+        position: absolute;
+        top: 145px;
+        left: 80px;
+      }
+    }
+  }
+}
