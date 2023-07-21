@@ -38,7 +38,7 @@ function App() {
           element: <Destinations />,
         },
         {
-          path: "/destination/:id",
+          path: "/destinations/:id",
           element: <Destination />,
         },
       ],

@@ -1,3 +1,6 @@
+@import "../../styles/variables.scss";
+
+
 .footer {
   border-top: 2px solid #7e7e7e2d;
   width: 100%;
@@ -44,7 +47,7 @@
           font-weight: 500;
           transition: 250ms;
           &:hover {
-            color: #7e7e7e;
+            color: $light-color;
           }
         }
       }
@@ -57,7 +60,7 @@
     align-items: center;
     padding: 1.5em 0;
     p {
-        color: #7e7e7e;
+        color: $light-color;
     }
     .footer__listMedia {
       display: flex;
@@ -66,7 +69,7 @@
         font-size: 22px;
         transition: 250ms;
         &:hover {
-          color: #7e7e7e;
+          color: $light-color;
         }
       }
     }

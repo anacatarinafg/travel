@@ -1,3 +1,43 @@
+@import "../../styles/variables.scss";
+
 .destinations {
-    
+  width: 95%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  .destinations__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .destinations__headline {
+      font-weight: 400;
+      font-size: 36px;
+    }
+    .destinations__search {
+      border: 1px solid $light-color;
+      border-radius: 25px;
+      padding: 0.75em 1.25em;
+      cursor: text;
+    }
+  }
+  .destinations__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 2.5em 0;
+  }
+  .destinations__box {
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid $light-color;
+    border-radius: 10px;
+    padding: 1.5em;
+    img {
+      max-width: 450px;
+      max-height: 250px;
+      object-fit: cover;
+    }
+  }
 }

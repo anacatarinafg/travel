@@ -1,3 +1,5 @@
+@import "../../styles/variables.scss";
+
 header {
   .navbar {
     width: 95%;
@@ -21,7 +23,7 @@ header {
       .navbar__item {
         transition: 250ms;
         &:hover {
-          color: #7e7e7e;
+          color: $light-color;
         }
       }
     }
@@ -32,7 +34,7 @@ header {
       padding: 0.5em 1em;
       transition: 250ms;
       &:hover {
-        background-color: #7e7e7e;
+        background-color: $light-color;
       }
     }
   }

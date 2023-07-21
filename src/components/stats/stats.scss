@@ -1,0 +1,27 @@
+.stats {
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5.5em 0;
+  margin-bottom: 150px;
+  .stats__box {
+    padding: 2.5em;
+    box-shadow: grey 0px 0px 0px 2px inset,
+      rgb(255, 255, 255) 10px -10px 0px -3px, grey 10px -10px,
+      rgb(255, 255, 255) 20px -20px 0px -3px, grey 20px -20px,
+      rgb(255, 255, 255) 30px -30px 0px -3px, grey 30px -30px,
+      rgb(255, 255, 255) 40px -40px 0px -3px, grey 40px -40px;
+    border-radius: 10px;
+    .stats__number {
+      font-size: 72px;
+      text-align: center;
+      font-weight: 400;
+    }
+    .stats__text {
+      text-align: center;
+      font-size: 22px;
+      text-transform: capitalize;
+    }
+  }
+}
