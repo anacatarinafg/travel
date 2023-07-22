@@ -1,3 +1,80 @@
+@import "../../styles/variables.scss";
+
 .single {
-    
+  width: 95%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  border-top: 3px solid #000;
+  margin-top: 100px;
+  .single__headline {
+    font-weight: 400;
+    font-size: 52px;
+    text-align: center;
+    padding: 1em 0;
+  }
+  .single__images {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2.5em;
+    img {
+      width: 500px;
+      height: 350px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+  }
+  .single__tours {
+    display: grid;
+    grid-template-columns: 1.5fr 0.2fr 1.8fr;
+    padding: 2.5em 0;
+
+    .single__day {
+      border-right: 3px solid #000;
+      button {
+        display: block;
+        padding: 0.5em 0;
+        text-transform: uppercase;
+        font-weight: 500;
+        color: $light-color;
+        &:active {
+          color: #000;
+        }
+      }
+    }
+    .single__hours {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-right: 3px solid #000;
+      div {
+      }
+      p {
+        font-weight: 600;
+        font-size: 18px;
+        padding: 0.35em 1em;
+        text-align: center;
+        &:last-child {
+          margin-bottom: 30px;
+        }
+      }
+    }
+    .single__crono {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      div {
+      }
+      p {
+        font-weight: 400;
+        font-size: 16px;
+        padding: 0.35em 1em;
+        text-align: justify;
+        &:last-child {
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
 }

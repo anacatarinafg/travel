@@ -28,15 +28,10 @@
     padding: 2.5em 0;
   }
   .destinations__box {
-    height: 700px;
-    display: flex;
-    flex-direction: column;
-    border: 1px solid $light-color;
-    border-radius: 10px;
-    padding: 1.5em;
+
     img {
-      max-width: 450px;
-      max-height: 250px;
+      width: 450px;
+      height: 250px;
       object-fit: cover;
     }
   }

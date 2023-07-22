@@ -20,7 +20,7 @@ const Destinations = () => {
             className="destinations__box"
             key={destination.id}
           >
-            <img src={destination.img} alt={destination.place} />
+            <img src={destination.img[0]} alt={destination.place} />
             <div className="destination__info">
               <h2 className="destination__place">{destination.place}</h2>
               <p className="destination__text">{destination.title}</p>
