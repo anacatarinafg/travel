@@ -10,10 +10,12 @@ interface Props {
   addInfo: string;
   day: string[];
   tour: string[];
+  hours: string[];
+  plan: string;
 }
 
 const Single = (props: Props) => {
-  const { id, img, place, title, about, color, day, tour } = props;
+  const { id, img, place, title, about, color, day, tour, hours, plan } = props;
 
   return (
     <div className="single">
@@ -49,25 +51,17 @@ const Single = (props: Props) => {
         </div>
         <div className="single__hours">
           <div>
-            <p>08:00</p>
-            <p>09:30</p>
+            <p>{hours[0]}</p>
+            <p>{hours[1]}</p>
           </div>
 
-          <p>18:30</p>
+          <p>{hours[2]}</p>
         </div>
         <div className="single__crono">
           <div>
             <p>Breakfast at hotel</p>
             <p>
-              Departure for a sea excursion to the White Rocks.
-              <br />
-              During the excursion, the tourist makes a trip along the ... coast
-              of Iturup Island. On the route, you will visit Olya Bay, Black
-              stones, White Rocks, waterfalls in Parasuaya, Bay, inspection of
-              the sea lion and seal rockeries, perhaps their abscence at the
-              rockery, Tomaya Bay, Lake Soposchoyo. Lunch on the route - tea,
-              coffee, seafood, sandwiches, fruits, sweets. Visit to the
-              water-health complex of thermal waters Hot Waters.
+              {plan}
             </p>
           </div>
 
