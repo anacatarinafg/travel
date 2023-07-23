@@ -9,30 +9,86 @@
   .destinations__top {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    .destinations__headline {
-      font-weight: 400;
-      font-size: 36px;
+    padding: 2.5em 0;
+    .top__left {
+      width: 100%;
+      align-self: flex-end;
+      .destinations__headline {
+        text-transform: uppercase;
+        font-size: 72px;
+        font-weight: 400;
+      }
+      .destinations__text {
+        width: 520px;
+        text-align: justify;
+        padding: 1em 0;
+      }
     }
+    .top__right {
+      width: 100%;
+      img {
+        width: 100%;
+        height: 500px;
+        object-fit: contain;
+      }
+    }
+  }
+  .destinations__searchBox {
+    width: 100%;
+    padding: 2.5em 0;
     .destinations__search {
+      width: 100%;
       border: 1px solid $light-color;
       border-radius: 25px;
-      padding: 0.75em 1.25em;
+      padding: 0.5em;
       cursor: text;
     }
   }
   .destinations__wrapper {
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
-    padding: 2.5em 0;
-  }
-  .destinations__box {
-
-    img {
-      width: 450px;
-      height: 250px;
-      object-fit: cover;
+    .destinations__box {
+      width: 400px;
+      height: 400px;
+      display: flex;
+      gap: 30px;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: 1;
+        opacity: 1;
+        transition: opacity 250ms ease;
+      }
+      &:hover::before {
+        opacity: 0;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .destinations__info {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        .destinations__place {
+          color: #fff;
+          font-size: 26px;
+          text-transform: uppercase;
+          font-weight: 400;
+        }
+      }
     }
   }
 }
