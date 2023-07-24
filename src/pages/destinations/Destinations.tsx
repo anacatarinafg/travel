@@ -19,9 +19,13 @@ const Destinations = () => {
         <div className="top__left">
           <h2 className="destinations__headline">Destinations</h2>
           <p className="destinations__text">
-            Experience the incredible beauty of Scandinavia, the Nordic and
-            Baltic countries, scenic landscapes of Ireland and historic sights
-            of the United Kingdom. Experience the incredible beauty of Scandinavia, the Nordic and Baltic countries, scenic landscapes of Ireland and historic sights of the United Kingdom.
+            Here at <i>viajar</i> we set about to equip the savvy traveller find
+            all they need to know to plan their next trip and provide them with
+            better booking options. With our mix of locals' knowledge, select
+            destination partners and the latest web-technology, we keep right
+            up-to-date with all the latest news, weather, events and offers...
+            our detailed destination guides mean you'll never be short of things
+            to see, places to stay, or unique experiences to try.
           </p>
         </div>
         <div className="top__right">
