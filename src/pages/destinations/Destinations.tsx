@@ -1,17 +1,16 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./destinations.scss";
 import { destinations } from "../../data";
 import { Link } from "react-router-dom";
 
 const Destinations = () => {
-  // State variables
   const [search, setSearch] = useState("");
-  const [load, setLoad] = useState(3);
+  const [load, setLoad] = useState(12);
   const [filter, setFilter] = useState(destinations);
 
   // Function to show more destinations when the button is clicked
   const showMore = () => {
-    setLoad((previousValue) => previousValue + 3);
+    setLoad((previousValue) => previousValue + 12);
   };
 
   // Function to filter destinations based on the selected continent
@@ -25,6 +24,26 @@ const Destinations = () => {
     // Set the filtered results using the 'setFilter' function
     setFilter(results);
   };
+
+  const maxPrice = destinations.reduce((max, destination) => {
+    return destination.price > max ? destination.price : max;
+  }, 0);
+
+  const minPrice = destinations.reduce((min, destination) => {
+    return destination.price < min ? destination.price : min;
+  }, Infinity); // Initialize with Infinity, so the first destination price becomes the minimum.
+
+  // State to track min and max prices
+  const [filterMaxPrice, setFilterMaxPrice] = useState(maxPrice);
+  const [filterMinPrice, setFilterMinPrice] = useState(minPrice);
+
+  // State to track current price (minimum)
+  const [price, setPrice] = useState(minPrice);
+
+  // useEffect to update the 'price' state when 'minPrice' changes
+  useEffect(() => {
+    setPrice(minPrice);
+  }, [minPrice]);
 
   return (
     <div className="destinations">
@@ -52,10 +71,21 @@ const Destinations = () => {
           <button onClick={() => filterDestinations("Africa")}>Africa</button>
           <button onClick={() => filterDestinations("America")}>America</button>
           <button onClick={() => filterDestinations("Asia")}>Asia</button>
-          <button onClick={() => filterDestinations("Antartic")}>
-            Antartic
-          </button>
+          <button onClick={() => filterDestinations("Antarctica")}>Antarctica</button>
+          <button onClick={() => filterDestinations("Australia")}>Australia</button>
           <button onClick={() => filterDestinations("Europe")}>Europe</button>
+        </div>
+        <div className="destinations__priceFilter">
+          <h4>Cheaper to higher places:</h4>
+          <input
+            type="range"
+            name="range"
+            min={minPrice}
+            max={maxPrice}
+            value={price}
+            onChange={(e) => setPrice(parseFloat(e.target.value))}
+          ></input>
+          <h4>{price}€</h4>
         </div>
       </div>
       <div className="destinations__searchBox">
