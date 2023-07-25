@@ -71,8 +71,12 @@ const Destinations = () => {
           <button onClick={() => filterDestinations("Africa")}>Africa</button>
           <button onClick={() => filterDestinations("America")}>America</button>
           <button onClick={() => filterDestinations("Asia")}>Asia</button>
-          <button onClick={() => filterDestinations("Antarctica")}>Antarctica</button>
-          <button onClick={() => filterDestinations("Australia")}>Australia</button>
+          <button onClick={() => filterDestinations("Antarctica")}>
+            Antarctica
+          </button>
+          <button onClick={() => filterDestinations("Australia")}>
+            Australia
+          </button>
           <button onClick={() => filterDestinations("Europe")}>Europe</button>
         </div>
         <div className="destinations__priceFilter">

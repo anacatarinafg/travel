@@ -222,36 +222,6 @@ export const destinations = [
     price: 2790,
   },
 
-  // Destination 14
-  {
-    id: 14,
-    img: [
-      "./assets/kenya1.jpg",
-      "../../../assets/kenya2.webp",
-      "../../../assets/kenya3.jpg",
-      "../../../assets/kenya4.webp",
-    ],
-    place: "Kenya",
-    title: "Safari in Kenya",
-    about:
-      "Kenya is an East African country known for its abundant wildlife and scenic landscapes. It offers thrilling safari experiences and the chance to witness the Great Migration.",
-    color: "",
-    addInfo: "Additional information about Kenya goes here...",
-    day: ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day 6", "Day 7"],
-    tour: [
-      "Arrival in Nairobi",
-      "Nairobi National Park",
-      "Maasai Mara National Reserve",
-      "Tsavo East National Park",
-      "Lake Nakuru National Park",
-      "Leaning Tower of Pisa and Tuscan Countryside",
-      "Departure from Nairobi",
-    ],
-    hours: ["08:30", "09:00", "20:00"],
-    plan: "Embark on an unforgettable safari adventure through the wilderness of Kenya.",
-    continent: "Africa",
-    price: 3150,
-  },
   // Destination 15
   {
     id: 15,
@@ -283,36 +253,6 @@ export const destinations = [
     price: 2890,
   },
 
-  // Destination 16
-  {
-    id: 16,
-    img: [
-      "./assets/france1.jpg",
-      "../../../assets/france2.webp",
-      "../../../assets/france3.webp",
-      "../../../assets/france4.jpg",
-    ],
-    place: "France",
-    title: "French Romance",
-    about:
-      "France is a European country known for its romantic ambiance, exquisite cuisine, and iconic landmarks like the Eiffel Tower and Louvre Museum.",
-    color: "",
-    addInfo: "Additional information about France goes here...",
-    day: ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day 6", "Day 7"],
-    tour: [
-      "Arrival in Paris",
-      "Paris City Tour",
-      "Louvre Museum and Montmartre",
-      "Palace of Versailles",
-      "French Riviera",
-      "Provence Lavender Fields",
-      "Departure from Nice",
-    ],
-    hours: ["08:30", "09:00", "20:00"],
-    plan: "Indulge in the romantic charm and cultural splendors of France.",
-    continent: "Europe",
-    price: 2690,
-  },
   // Destination 24
   {
     id: 24,
@@ -558,7 +498,7 @@ export const destinations = [
     hours: ["08:30", "09:00", "20:00"],
     plan: "Experience the joyful spirit and natural wonders of Brazil.",
     continent: "America",
-    price: 3390,
+    price: 5390,
   },
 
   // Destination 32
@@ -681,38 +621,7 @@ export const destinations = [
     hours: ["08:30", "09:00", "20:00"],
     plan: "Embark on exciting adventures in the land down under, Australia.",
     continent: "Australia",
-    price: 3590,
-  },
-
-  // Destination 36
-  {
-    id: 36,
-    img: [
-      "./assets/spain1.jpg",
-      "../../../assets/spain2.webp",
-      "../../../assets/spain3.webp",
-      "../../../assets/spain4.jpg",
-    ],
-    place: "Spain",
-    title: "Spanish Serenity",
-    about:
-      "Spain is a country known for its passionate culture, historic landmarks, and beautiful beaches.",
-    color: "",
-    addInfo: "Additional information about Spain goes here...",
-    day: ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day 6", "Day 7"],
-    tour: [
-      "Arrival in Madrid",
-      "Madrid City Tour",
-      "Toledo Day Trip",
-      "Barcelona's Gaudi Architecture",
-      "Park Guell and La Sagrada Familia",
-      "Valencia's Arts and Sciences",
-      "Departure from Madrid",
-    ],
-    hours: ["08:30", "09:00", "20:00"],
-    plan: "Experience the charm and vibrancy of Spain on this serene journey.",
-    continent: "Europe",
-    price: 3290,
+    price: 6390,
   },
   // Destination 38
   {
