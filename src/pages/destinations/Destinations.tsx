@@ -8,23 +8,6 @@ const Destinations = () => {
   const [load, setLoad] = useState(12);
   const [filter, setFilter] = useState(destinations);
 
-  // Function to show more destinations when the button is clicked
-  const showMore = () => {
-    setLoad((previousValue) => previousValue + 12);
-  };
-
-  // Function to filter destinations based on the selected continent
-  const filterDestinations = (destItem: string): void => {
-    // Create an array to store the filtered results
-    const results = destinations.filter(
-      // Use the Array.filter() method to iterate through the 'destinations' array and filter the destinations based on the selected continent
-      (destination) => destination.continent === destItem
-    );
-
-    // Set the filtered results using the 'setFilter' function
-    setFilter(results);
-  };
-
   const maxPrice = destinations.reduce((max, destination) => {
     return destination.price > max ? destination.price : max;
   }, 0);
@@ -44,6 +27,32 @@ const Destinations = () => {
   useEffect(() => {
     setPrice(minPrice);
   }, [minPrice]);
+
+  // Function to show more destinations when the button is clicked
+  const showMore = () => {
+    setLoad((previousValue) => previousValue + 12);
+  };
+
+  // Function to filter destinations based on the selected continent
+  const filterDestinations = (destItem: string): void => {
+    // Create an array to store the filtered results
+    const filteredByContinent = destinations.filter(
+      // Use the Array.filter() method to iterate through the 'destinations' array and filter the destinations based on the selected continent
+      (destination) => destination.continent === destItem
+    );
+
+    // Set the filtered results using the 'setFilter' function
+    setFilter(filteredByContinent);
+  };
+
+  // Function to filter destinations based on the selected continent
+  const filterPrice = (destItem: string): void => {
+    const filteredByPrice = destinations.filter(
+      (destination) => destination.price <= price
+    );
+
+    setFilter(filteredByPrice);
+  };
 
   return (
     <div className="destinations">
@@ -87,7 +96,10 @@ const Destinations = () => {
             min={minPrice}
             max={maxPrice}
             value={price}
-            onChange={(e) => setPrice(parseFloat(e.target.value))}
+            onChange={(e) => {
+              setPrice(parseFloat(e.target.value));
+              filterPrice(e.target.value);
+            }}
           ></input>
           <h4>{price}€</h4>
         </div>
