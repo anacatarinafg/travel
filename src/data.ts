@@ -35,6 +35,7 @@ export const destinations = [
     tour: ["The historic centre of Lagos and the Ponta da Piedade", "Beach day", "Day trip to Sagres and Cabo de São Vicente", "Dolphin watching and coastline boat tour or day trip to Burgau", "A day at Zoomarine", "Day trip to Portimão and Praia da Rocha", "Day trip to Praia da Luz, cycle trip or coastal hike"],
     hours: ["08:30", "09:30", "18:30"],
     plan: "",
+    continent: "Europe",
   },
   {
     id: 2,
@@ -54,6 +55,7 @@ export const destinations = [
     tour: ["Bus Tour & Midtown", "Boat Tour & The High Line", "Museum & Central Park", "Statue of Liberty & Ground Zero", "Brooklyn Heights & Lower Manhattan", "Helicopter Ride & SoHo", "Brooklyn"],
     hours: ["08:30", "09:30", "19:30"],
     plan: "",
+    continent: "America",
   },
   {
     id: 3,
@@ -81,6 +83,7 @@ export const destinations = [
     ],
     hours: ["09:00", "09:30", "20:00"],
     plan: "",
+    continent: "Asia",
   },
   {
     id: 4,
@@ -99,6 +102,7 @@ export const destinations = [
     tour: ["Singapore: Arrival and Night Safari", "Day tour of Universal Studio", "A day at the Garden by the Bay", "A day at the Sentosa Island", "Half-day tour of Singapore City", "Singapore: Leisure Day", "Departure"],
     hours: ["08:30", "09:00", "20:00"],
     plan: "",
+    continent: "Asia",
   },
   {
     id: 5,
@@ -117,5 +121,6 @@ export const destinations = [
     tour: ["Arrive in Zurich & Explore", "Lucerne", "Interlaken and Lake Brienz", "Lake Thun", "Zermatt", "Bern", "Gruyere & Montreux"],
     hours: ["08:00", "09:00", "20:00"],
     plan: "",
+    continent: "Europe",
   },
 ];

@@ -4,14 +4,27 @@ import { destinations } from "../../data";
 import { Link } from "react-router-dom";
 
 const Destinations = () => {
+  // State variables
   const [search, setSearch] = useState("");
-  const [load, setLoad] = useState(6);
+  const [load, setLoad] = useState(3);
+  const [filter, setFilter] = useState(destinations);
 
+  // Function to show more destinations when the button is clicked
   const showMore = () => {
     setLoad((previousValue) => previousValue + 3);
   };
 
-  // console.log(destinations.filter((destination) => destination.place.toLowerCase().includes("du")));
+  // Function to filter destinations based on the selected continent
+  const filterDestinations = (destItem: string): void => {
+    // Create an array to store the filtered results
+    const results = destinations.filter(
+      // Use the Array.filter() method to iterate through the 'destinations' array and filter the destinations based on the selected continent
+      (destination) => destination.continent === destItem
+    );
+
+    // Set the filtered results using the 'setFilter' function
+    setFilter(results);
+  };
 
   return (
     <div className="destinations">
@@ -32,6 +45,19 @@ const Destinations = () => {
           <img src="./assets/worldgif.gif" alt="world-map"></img>
         </div>
       </div>
+      <div className="destinations__filter">
+        <h4>Where do you want to go:</h4>
+        <div>
+          <button onClick={() => setFilter(destinations)}>All</button>
+          <button onClick={() => filterDestinations("Africa")}>Africa</button>
+          <button onClick={() => filterDestinations("America")}>America</button>
+          <button onClick={() => filterDestinations("Asia")}>Asia</button>
+          <button onClick={() => filterDestinations("Antartic")}>
+            Antartic
+          </button>
+          <button onClick={() => filterDestinations("Europe")}>Europe</button>
+        </div>
+      </div>
       <div className="destinations__searchBox">
         <input
           type="search"
@@ -41,30 +67,33 @@ const Destinations = () => {
         ></input>
       </div>
       <div className="destinations__wrapper">
-        {destinations
-          .filter((destination) =>
-            destination.place.toLowerCase().includes(search.toLocaleLowerCase())
-          )
-          .slice(0, load)
-          .map((destination) => (
-            <Link
-              to={`/destinations/${destination.id}`}
-              className="destinations__box"
-              key={destination.id}
-            >
-              <img src={destination.img[0]} alt={destination.place} />
-              <div className="destinations__info">
-                <h2 className="destinations__place">{destination.place}</h2>
-              </div>
-            </Link>
-          ))}
+        {filter.length > 0 ? (
+          filter
+            .filter((destination) =>
+              destination.place.toLowerCase().includes(search.toLowerCase())
+            )
+            .slice(0, load)
+            .map((destination) => (
+              <Link
+                to={`/destinations/${destination.id}`}
+                className="destinations__box"
+                key={destination.id}
+              >
+                <img src={destination.img[0]} alt={destination.place} />
+                <div className="destinations__info">
+                  <h2 className="destinations__place">{destination.place}</h2>
+                </div>
+              </Link>
+            ))
+        ) : (
+          <p>No destinations matching the selected continent.</p>
+        )}
       </div>
       <div className="destinations__buttonBox">
         <button onClick={showMore} className="destinations__button">
           More destinations
         </button>
       </div>
-      {/* REMINDER TO MAKE A FILTER */}
     </div>
   );
 };
