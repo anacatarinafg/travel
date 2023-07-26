@@ -132,7 +132,7 @@ const Destinations = () => {
               </Link>
             ))
         ) : (
-          <p>No destinations matching the selected continent.</p>
+          <p className="destinations__error">No destinations matching the selected continent.</p>
         )}
       </div>
       <div className="destinations__buttonBox">
