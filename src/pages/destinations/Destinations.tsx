@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Destinations = () => {
   const [search, setSearch] = useState("");
-  const [load, setLoad] = useState(12);
+  const [load, setLoad] = useState(16);
   const [filter, setFilter] = useState(destinations);
   const [activeButtonId, setActiveButtonId] = useState("all");
 
@@ -31,8 +31,11 @@ const Destinations = () => {
 
   // Function to show more destinations when the button is clicked
   const showMore = () => {
-    setLoad((previousValue) => previousValue + 12);
+    setLoad((previousValue) => previousValue + 16);
   };
+
+  // when the load reaches its maximum value, the button will be disabled, and the cursor will change to "not-allowed"
+  const isButtonDisabled = load >= filter.length;
 
   // Function to filter destinations based on the selected continent
   const filterDestinations = (destItem: string): void => {
@@ -55,9 +58,13 @@ const Destinations = () => {
     setFilter(filteredByPrice);
   };
 
-  // Function to clear all the filters selected
-  const clearFilters = () => {};
-
+  // Function to reset all the filters selected
+  const clearFilters = () => {
+    setFilter(destinations);
+    setPrice(minPrice);
+    setSearch("");
+    setActiveButtonId("all");
+  };
 
   // Define a type for the button IDs
   type ButtonId =
@@ -115,21 +122,21 @@ const Destinations = () => {
             </button>
             <button
               onClick={() => {
-                filterDestinations("Asia");
-                handleButtonClick("asia");
-              }}
-              className={activeButtonId === "asia" ? "active" : ""}
-            >
-              Asia
-            </button>
-            <button
-              onClick={() => {
                 filterDestinations("Antartica");
                 handleButtonClick("antarctica");
               }}
               className={activeButtonId === "antarctica" ? "active" : ""}
             >
               Antarctica
+            </button>
+            <button
+              onClick={() => {
+                filterDestinations("Asia");
+                handleButtonClick("asia");
+              }}
+              className={activeButtonId === "asia" ? "active" : ""}
+            >
+              Asia
             </button>
             <button
               onClick={() => {
@@ -175,7 +182,7 @@ const Destinations = () => {
           ></input>
           <button
             onChange={() => clearFilters()}
-            onClick={() => setFilter(destinations)}
+            onClick={clearFilters}
             className="destinations__clearFilters"
           >
             Clear filters
@@ -207,7 +214,12 @@ const Destinations = () => {
           )}
         </div>
         <div className="destinations__buttonBox">
-          <button onClick={showMore} className="destinations__button">
+          <button
+            onClick={showMore}
+            className="destinations__button"
+            disabled={isButtonDisabled}
+            style={{ cursor: isButtonDisabled ? "not-allowed" : "pointer" }}
+          >
             More destinations
           </button>
         </div>

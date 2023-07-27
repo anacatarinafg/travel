@@ -164,10 +164,10 @@ export const destinations = [
   {
     id: 6,
     img: [
-      "./assets/italy1.jpg",
-      "../../../assets/italy2.webp",
-      "../../../assets/italy3.jpg",
-      "../../../assets/italy4.jpg",
+      "https://d2rdhxfof4qmbb.cloudfront.net/wp-content/uploads/20180301194244/Rome-Tile.jpg",
+      "https://lp-cms-production.imgix.net/2023-05/GettyImages-1213749700.jpg",
+      "https://lp-cms-production.imgix.net/2023-05/GettyImages-1213749700.jpg",
+      "https://lp-cms-production.imgix.net/2023-05/GettyImages-1213749700.jpg",
     ],
     place: "Italy",
     title: "Exploring Italy",
@@ -195,10 +195,10 @@ export const destinations = [
   {
     id: 13,
     img: [
-      "./assets/spain1.jpg",
-      "../../../assets/spain2.webp",
-      "../../../assets/spain3.webp",
-      "../../../assets/spain4.jpg",
+      "https://i.natgeofe.com/k/e800ca90-2b5b-4dad-b4d7-b67a48c96c91/spain-madrid_16x9.jpg?w=1200",
+      "https://hips.hearstapps.com/hmg-prod/images/spain-holiday-destinations-lead-girona-pol-albarra-n-1675292136.jpg?crop=0.654xw:1.00xh;0.0913xw,0&resize=1200:*",
+      "https://hips.hearstapps.com/hmg-prod/images/spain-holiday-destinations-lead-girona-pol-albarra-n-1675292136.jpg?crop=0.654xw:1.00xh;0.0913xw,0&resize=1200:*",
+      "https://hips.hearstapps.com/hmg-prod/images/spain-holiday-destinations-lead-girona-pol-albarra-n-1675292136.jpg?crop=0.654xw:1.00xh;0.0913xw,0&resize=1200:*",
     ],
     place: "Spain",
     title: "Spanish Delights",
@@ -226,10 +226,10 @@ export const destinations = [
   {
     id: 15,
     img: [
-      "./assets/china1.jpg",
-      "../../../assets/china2.webp",
-      "../../../assets/china3.jpg",
-      "../../../assets/china4.webp",
+      "https://www.remessaonline.com.br/blog/wp-content/uploads/2022/06/morar-na-china.jpg",
+      "https://www.remessaonline.com.br/blog/wp-content/uploads/2022/06/morar-na-china.jpg",
+      "https://www.remessaonline.com.br/blog/wp-content/uploads/2022/06/morar-na-china.jpg",
+      "https://www.remessaonline.com.br/blog/wp-content/uploads/2022/06/morar-na-china.jpg",
     ],
     place: "China",
     title: "China's Wonders",
@@ -257,10 +257,10 @@ export const destinations = [
   {
     id: 24,
     img: [
-      "./assets/canada1.jpg",
-      "../../../assets/canada2.webp",
-      "../../../assets/canada3.webp",
-      "../../../assets/canada4.jpg",
+      "https://caianomundo-prod.imgix.net/2019/02/iStock-525508231.jpg?fm=pjpg&ixlib=php-1.2.1",
+      "https://caianomundo-prod.imgix.net/2019/02/iStock-525508231.jpg?fm=pjpg&ixlib=php-1.2.1",
+      "https://caianomundo-prod.imgix.net/2019/02/iStock-525508231.jpg?fm=pjpg&ixlib=php-1.2.1",
+      "https://caianomundo-prod.imgix.net/2019/02/iStock-525508231.jpg?fm=pjpg&ixlib=php-1.2.1",
     ],
     place: "Canada",
     title: "Canadian Charm",
@@ -288,10 +288,10 @@ export const destinations = [
   {
     id: 25,
     img: [
-      "./assets/norway1.jpg",
-      "../../../assets/norway2.webp",
-      "../../../assets/norway3.webp",
-      "../../../assets/norway4.jpg",
+      "https://imageio.forbes.com/specials-images/imageserve/64a7305f67c2f785098aa506/0x0.jpg?format=jpg&width=1200",
+      "https://imageio.forbes.com/specials-images/imageserve/64a7305f67c2f785098aa506/0x0.jpg?format=jpg&width=1200",
+      "https://imageio.forbes.com/specials-images/imageserve/64a7305f67c2f785098aa506/0x0.jpg?format=jpg&width=1200",
+      "https://imageio.forbes.com/specials-images/imageserve/64a7305f67c2f785098aa506/0x0.jpg?format=jpg&width=1200",
     ],
     place: "Norway",
     title: "Norwegian Nature",
@@ -319,10 +319,10 @@ export const destinations = [
   {
     id: 26,
     img: [
-      "./assets/morocco1.jpg",
-      "../../../assets/morocco2.webp",
-      "../../../assets/morocco3.webp",
-      "../../../assets/morocco4.jpg",
+      "https://img.theculturetrip.com/x/wp-content/uploads/2022/10/heidi-kaden-nncabldgvia-unsplash.jpg",
+      "https://img.theculturetrip.com/x/wp-content/uploads/2022/10/heidi-kaden-nncabldgvia-unsplash.jpg",
+      "https://img.theculturetrip.com/x/wp-content/uploads/2022/10/heidi-kaden-nncabldgvia-unsplash.jpg",
+      "https://img.theculturetrip.com/x/wp-content/uploads/2022/10/heidi-kaden-nncabldgvia-unsplash.jpg",
     ],
     place: "Morocco",
     title: "Marvels of Morocco",
@@ -350,10 +350,10 @@ export const destinations = [
   {
     id: 27,
     img: [
-      "./assets/nz1.jpg",
-      "../../../assets/nz2.webp",
-      "../../../assets/nz3.webp",
-      "../../../assets/nz4.jpg",
+      "https://media.gq.com/photos/5ba1680236b2d004cdd843cd/16:9/w_2560%2Cc_limit/new-zealand-queenstown-travel-guide-gq.jpg",
+      "https://media.gq.com/photos/5ba1680236b2d004cdd843cd/16:9/w_2560%2Cc_limit/new-zealand-queenstown-travel-guide-gq.jpg",
+      "https://media.gq.com/photos/5ba1680236b2d004cdd843cd/16:9/w_2560%2Cc_limit/new-zealand-queenstown-travel-guide-gq.jpg",
+      "https://media.gq.com/photos/5ba1680236b2d004cdd843cd/16:9/w_2560%2Cc_limit/new-zealand-queenstown-travel-guide-gq.jpg",
     ],
     place: "New Zealand",
     title: "New Zealand Enchantment",
@@ -381,10 +381,10 @@ export const destinations = [
   {
     id: 28,
     img: [
-      "./assets/vietnam1.jpg",
-      "../../../assets/vietnam2.webp",
-      "../../../assets/vietnam3.webp",
-      "../../../assets/vietnam4.jpg",
+      "https://static.toiimg.com/photo/101545435.cms",
+      "https://static.toiimg.com/photo/101545435.cms",
+      "https://static.toiimg.com/photo/101545435.cms",
+      "https://static.toiimg.com/photo/101545435.cms",
     ],
     place: "Vietnam",
     title: "Vietnamese Vistas",
@@ -412,10 +412,10 @@ export const destinations = [
   {
     id: 29,
     img: [
-      "./assets/iceland1.jpg",
-      "../../../assets/iceland2.webp",
-      "../../../assets/iceland3.webp",
-      "../../../assets/iceland4.jpg",
+      "https://images.prismic.io/visiticeland/2660b22b-2743-4b8a-a500-8a6286cdd6eb_geosea-4.jpg?auto=compress,format",
+      "https://images.prismic.io/visiticeland/2660b22b-2743-4b8a-a500-8a6286cdd6eb_geosea-4.jpg?auto=compress,format",
+      "https://images.prismic.io/visiticeland/2660b22b-2743-4b8a-a500-8a6286cdd6eb_geosea-4.jpg?auto=compress,format",
+      "https://images.prismic.io/visiticeland/2660b22b-2743-4b8a-a500-8a6286cdd6eb_geosea-4.jpg?auto=compress,format",
     ],
     place: "Iceland",
     title: "Icelandic Wonders",
@@ -443,10 +443,10 @@ export const destinations = [
   {
     id: 30,
     img: [
-      "./assets/india1.jpg",
-      "../../../assets/india2.webp",
-      "../../../assets/india3.webp",
-      "../../../assets/india4.jpg",
+      "https://media.iatiseguros.com/wp-content/uploads/sites/6/2022/11/04104405/roteiro-15-dias-india-1.jpg",
+      "https://media.iatiseguros.com/wp-content/uploads/sites/6/2022/11/04104405/roteiro-15-dias-india-1.jpg",
+      "https://media.iatiseguros.com/wp-content/uploads/sites/6/2022/11/04104405/roteiro-15-dias-india-1.jpg",
+      "https://media.iatiseguros.com/wp-content/uploads/sites/6/2022/11/04104405/roteiro-15-dias-india-1.jpg",
     ],
     place: "India",
     title: "Taj Mahal & Beyond",
@@ -474,10 +474,10 @@ export const destinations = [
   {
     id: 31,
     img: [
-      "./assets/brazil1.jpg",
-      "../../../assets/brazil2.webp",
-      "../../../assets/brazil3.webp",
-      "../../../assets/brazil4.jpg",
+      "https://www.voltaaomundo.pt/files/2022/07/brasil-rio-de-janeiro-geral-corcovado-1-pixabay.jpg",
+      "https://www.voltaaomundo.pt/files/2022/07/brasil-rio-de-janeiro-geral-corcovado-1-pixabay.jpg",
+      "https://www.voltaaomundo.pt/files/2022/07/brasil-rio-de-janeiro-geral-corcovado-1-pixabay.jpg",
+      "https://www.voltaaomundo.pt/files/2022/07/brasil-rio-de-janeiro-geral-corcovado-1-pixabay.jpg",
     ],
     place: "Brazil",
     title: "Brazilian Bliss",
@@ -505,10 +505,10 @@ export const destinations = [
   {
     id: 32,
     img: [
-      "./assets/kenya1.jpg",
-      "../../../assets/kenya2.webp",
-      "../../../assets/kenya3.webp",
-      "../../../assets/kenya4.jpg",
+      "https://www.nationalgeographic.com/content/dam/expeditions/destinations/africa/land/kenya-on-safari/kenya-on-safari-hero.ngsversion.1686944468364.adapt.1900.1.jpg",
+      "https://www.nationalgeographic.com/content/dam/expeditions/destinations/africa/land/kenya-on-safari/kenya-on-safari-hero.ngsversion.1686944468364.adapt.1900.1.jpg",
+      "https://www.nationalgeographic.com/content/dam/expeditions/destinations/africa/land/kenya-on-safari/kenya-on-safari-hero.ngsversion.1686944468364.adapt.1900.1.jpg",
+      "https://www.nationalgeographic.com/content/dam/expeditions/destinations/africa/land/kenya-on-safari/kenya-on-safari-hero.ngsversion.1686944468364.adapt.1900.1.jpg",
     ],
     place: "Kenya",
     title: "Kenyan Safari",
@@ -536,10 +536,10 @@ export const destinations = [
   {
     id: 33,
     img: [
-      "./assets/france1.jpg",
-      "../../../assets/france2.webp",
-      "../../../assets/france3.webp",
-      "../../../assets/france4.jpg",
+      "https://www.state.gov/wp-content/uploads/2018/11/France-1980x1406.jpg",
+      "https://www.state.gov/wp-content/uploads/2018/11/France-1980x1406.jpg",
+      "https://www.state.gov/wp-content/uploads/2018/11/France-1980x1406.jpg",
+      "https://www.state.gov/wp-content/uploads/2018/11/France-1980x1406.jpg",
     ],
     place: "France",
     title: "French Riviera",
@@ -566,10 +566,10 @@ export const destinations = [
   {
     id: 34,
     img: [
-      "./assets/thailand1.jpg",
-      "../../../assets/thailand2.webp",
-      "../../../assets/thailand3.webp",
-      "../../../assets/thailand4.jpg",
+      "https://www.rongoholidays.com/wp-content/uploads/2022/04/thailand-2.jpg",
+      "https://www.rongoholidays.com/wp-content/uploads/2022/04/thailand-2.jpg",
+      "https://www.rongoholidays.com/wp-content/uploads/2022/04/thailand-2.jpg",
+      "https://www.rongoholidays.com/wp-content/uploads/2022/04/thailand-2.jpg",
     ],
     place: "Thailand",
     title: "Island Paradise - Thailand",
@@ -597,10 +597,10 @@ export const destinations = [
   {
     id: 35,
     img: [
-      "./assets/australia1.jpg",
-      "../../../assets/australia2.webp",
-      "../../../assets/australia3.webp",
-      "../../../assets/australia4.jpg",
+      "https://www.remessaonline.com.br/blog/wp-content/uploads/2022/06/maiores-cidades-da-australia-1170x780.jpg.optimal.jpg",
+      "https://www.remessaonline.com.br/blog/wp-content/uploads/2022/06/maiores-cidades-da-australia-1170x780.jpg.optimal.jpg",
+      "https://www.remessaonline.com.br/blog/wp-content/uploads/2022/06/maiores-cidades-da-australia-1170x780.jpg.optimal.jpg",
+      "https://www.remessaonline.com.br/blog/wp-content/uploads/2022/06/maiores-cidades-da-australia-1170x780.jpg.optimal.jpg",
     ],
     place: "Australia",
     title: "Aussie Adventures",
@@ -627,10 +627,10 @@ export const destinations = [
   {
     id: 38,
     img: [
-      "./assets/safrica1.jpg",
-      "../../../assets/safrica2.webp",
-      "../../../assets/safrica3.webp",
-      "../../../assets/safrica4.jpg",
+      "https://afar.brightspotcdn.com/dims4/default/cc25533/2147483647/strip/true/crop/1440x764+0+0/resize/1440x764!/quality/90/?url=https%3A%2F%2Fafar-media-production-web.s3.amazonaws.com%2Fbrightspot%2F86%2Fba%2F808972c94fb289b1cc2819f4defb%2Fsouthafrica-marcreation-unsplash.jpg",
+      "https://afar.brightspotcdn.com/dims4/default/cc25533/2147483647/strip/true/crop/1440x764+0+0/resize/1440x764!/quality/90/?url=https%3A%2F%2Fafar-media-production-web.s3.amazonaws.com%2Fbrightspot%2F86%2Fba%2F808972c94fb289b1cc2819f4defb%2Fsouthafrica-marcreation-unsplash.jpg",
+      "https://afar.brightspotcdn.com/dims4/default/cc25533/2147483647/strip/true/crop/1440x764+0+0/resize/1440x764!/quality/90/?url=https%3A%2F%2Fafar-media-production-web.s3.amazonaws.com%2Fbrightspot%2F86%2Fba%2F808972c94fb289b1cc2819f4defb%2Fsouthafrica-marcreation-unsplash.jpg",
+      "https://afar.brightspotcdn.com/dims4/default/cc25533/2147483647/strip/true/crop/1440x764+0+0/resize/1440x764!/quality/90/?url=https%3A%2F%2Fafar-media-production-web.s3.amazonaws.com%2Fbrightspot%2F86%2Fba%2F808972c94fb289b1cc2819f4defb%2Fsouthafrica-marcreation-unsplash.jpg",
     ],
     place: "South Africa",
     title: "Safari in South Africa",
@@ -658,10 +658,10 @@ export const destinations = [
   {
     id: 39,
     img: [
-      "./assets/germany1.jpg",
-      "../../../assets/germany2.webp",
-      "../../../assets/germany3.webp",
-      "../../../assets/germany4.jpg",
+      "https://media.timeout.com/images/105237824/image.jpg",
+      "https://media.timeout.com/images/105237824/image.jpg",
+      "https://media.timeout.com/images/105237824/image.jpg",
+      "https://media.timeout.com/images/105237824/image.jpg",
     ],
     place: "Germany",
     title: "German Getaway",
@@ -689,10 +689,10 @@ export const destinations = [
   {
     id: 40,
     img: [
-      "./assets/mexico1.jpg",
-      "../../../assets/mexico2.webp",
-      "../../../assets/mexico3.webp",
-      "../../../assets/mexico4.jpg",
+      "https://www.segueviagem.com.br/wp-content/uploads/2020/10/shutterstock_1063645616-1200x675.jpg",
+      "https://www.segueviagem.com.br/wp-content/uploads/2020/10/shutterstock_1063645616-1200x675.jpg",
+      "https://www.segueviagem.com.br/wp-content/uploads/2020/10/shutterstock_1063645616-1200x675.jpg",
+      "https://www.segueviagem.com.br/wp-content/uploads/2020/10/shutterstock_1063645616-1200x675.jpg",
     ],
     place: "Mexico",
     title: "Mexican Magic",
