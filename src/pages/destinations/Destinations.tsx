@@ -8,6 +8,7 @@ const Destinations = () => {
   const [load, setLoad] = useState(16);
   const [filter, setFilter] = useState(destinations);
   const [activeButtonId, setActiveButtonId] = useState("all");
+  const [isPriceFilterActive, setIsPriceFilterActive] = useState(false);
 
   const maxPrice = destinations.reduce((max, destination) => {
     return destination.price > max ? destination.price : max;
@@ -15,53 +16,62 @@ const Destinations = () => {
 
   const minPrice = destinations.reduce((min, destination) => {
     return destination.price < min ? destination.price : min;
-  }, Infinity); // Initialize with Infinity, so the first destination price becomes the minimum.
+  }, Infinity);
 
-  // State to track min and max prices
-  const [filterMaxPrice, setFilterMaxPrice] = useState(maxPrice);
-  const [filterMinPrice, setFilterMinPrice] = useState(minPrice);
+  /**
+   * @param {string} Infinity When using Infinity as the initial value, the min variable starts with a value of positive infinity. As a result, the first destination's price will be the minimum price, regardless of its actual value. For subsequent destinations, the code will compare their prices with the current value of min and update min if a smaller price is found. This approach ensures that the minimum price is updated correctly throughout the loop and that the final result will be the minimum price among all the destinations.
+   */
 
   // State to track current price (minimum)
-  const [price, setPrice] = useState(minPrice);
+  const [price, setPrice] = useState(maxPrice);
 
   // useEffect to update the 'price' state when 'minPrice' changes
   useEffect(() => {
-    setPrice(minPrice);
-  }, [minPrice]);
+    setPrice(maxPrice);
+  }, [maxPrice]);
 
   // Function to show more destinations when the button is clicked
   const showMore = () => {
     setLoad((previousValue) => previousValue + 16);
   };
 
-  // when the load reaches its maximum value, the button will be disabled, and the cursor will change to "not-allowed"
+  // When the load reaches its maximum value, the button will be disabled, and the cursor will change to "not-allowed"
   const isButtonDisabled = load >= filter.length;
 
-  // Function to filter destinations based on the selected continent
-  const filterDestinations = (destItem: string): void => {
-    // Create an array to store the filtered results
-    const filteredByContinent = destinations.filter(
-      // Use the Array.filter() method to iterate through the 'destinations' array and filter the destinations based on the selected continent
-      (destination) => destination.continent === destItem
-    );
+  // Combine continent and price filters into a single function
+  const filterDestinations = (): void => {
+    let filteredDestinations = destinations;
 
-    // Set the filtered results using the 'setFilter' function
-    setFilter(filteredByContinent);
+    if (activeButtonId !== "all") {
+      // Convert activeButtonId to lowercase for comparison
+      const selectedContinent = activeButtonId.toLowerCase();
+
+      // Apply continent filter only if a continent other than "All" is selected
+      filteredDestinations = filteredDestinations.filter(
+        (destination) =>
+          destination.continent.toLowerCase() === selectedContinent
+      );
+    }
+
+    // Apply price filter only if the user has interacted with the price range
+    if (isPriceFilterActive) {
+      filteredDestinations = filteredDestinations.filter(
+        (destination) => destination.price <= price
+      );
+    }
+
+    setFilter(filteredDestinations);
   };
 
-  // Function to filter destinations based on the selected continent
-  const filterPrice = (destItem: string): void => {
-    const filteredByPrice = destinations.filter(
-      (destination) => destination.price <= price
-    );
-
-    setFilter(filteredByPrice);
-  };
+  // useEffect to update 'filter' state when 'activeButtonId' or 'price' changes
+  useEffect(() => {
+    filterDestinations();
+  }, [activeButtonId, price, isPriceFilterActive]);
 
   // Function to reset all the filters selected
   const clearFilters = () => {
     setFilter(destinations);
-    setPrice(minPrice);
+    setPrice(maxPrice);
     setSearch("");
     setActiveButtonId("all");
   };
@@ -94,64 +104,43 @@ const Destinations = () => {
           <h4>Where do you want to go:</h4>
           <div>
             <button
-              onClick={() => {
-                setFilter(destinations);
-                handleButtonClick("all");
-              }}
+              onClick={() => handleButtonClick("all")}
               className={activeButtonId === "all" ? "active" : ""}
             >
               All
             </button>
             <button
-              onClick={() => {
-                filterDestinations("Africa");
-                handleButtonClick("africa");
-              }}
+              onClick={() => handleButtonClick("africa")}
               className={activeButtonId === "africa" ? "active" : ""}
             >
               Africa
             </button>
             <button
-              onClick={() => {
-                filterDestinations("America");
-                handleButtonClick("america");
-              }}
+              onClick={() => handleButtonClick("america")}
               className={activeButtonId === "america" ? "active" : ""}
             >
               America
             </button>
             <button
-              onClick={() => {
-                filterDestinations("Antartica");
-                handleButtonClick("antarctica");
-              }}
+              onClick={() => handleButtonClick("antarctica")}
               className={activeButtonId === "antarctica" ? "active" : ""}
             >
               Antarctica
             </button>
             <button
-              onClick={() => {
-                filterDestinations("Asia");
-                handleButtonClick("asia");
-              }}
+              onClick={() => handleButtonClick("asia")}
               className={activeButtonId === "asia" ? "active" : ""}
             >
               Asia
             </button>
             <button
-              onClick={() => {
-                filterDestinations("Australia");
-                handleButtonClick("australia");
-              }}
+              onClick={() => handleButtonClick("australia")}
               className={activeButtonId === "australia" ? "active" : ""}
             >
               Australia
             </button>
             <button
-              onClick={() => {
-                filterDestinations("Europe");
-                handleButtonClick("europe");
-              }}
+              onClick={() => handleButtonClick("europe")}
               className={activeButtonId === "europe" ? "active" : ""}
             >
               Europe
@@ -167,7 +156,7 @@ const Destinations = () => {
               value={price}
               onChange={(e) => {
                 setPrice(parseFloat(e.target.value));
-                filterPrice(e.target.value);
+                setIsPriceFilterActive(true);
               }}
             ></input>
             <h4>{price}€</h4>
