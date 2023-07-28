@@ -1,4 +1,5 @@
 @import "../../styles/variables.scss";
+@import "../../styles/responsive.scss";
 
 .destinations__bg {
   width: 100%;
@@ -16,18 +17,63 @@
       display: flex;
       justify-content: space-between;
       padding: 2.5em 0;
+      @include sm {
+        padding: 1.5em 0;
+      }
+      @include md {
+        padding: 1.5em 0;
+      }
+      @include lg {
+        padding: 1.5em 0;
+      }
       .top__left {
         width: 100%;
         align-self: flex-start;
+        @include sm {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+        @include md {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+        @include lg {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
         .destinations__headline {
           text-transform: uppercase;
           font-size: 72px;
           font-weight: 400;
+          @include sm {
+            font-size: 52px;
+          }
+          @include md {
+            font-size: 52px;
+          }
+          @include lg {
+            font-size: 52px;
+          }
         }
         img {
           width: 25%;
           height: 500px;
           object-fit: contain;
+          @include sm {
+            width: 75%;
+          }
+          @include md {
+            width: 75%;
+          }
+          @include lg {
+            width: 75%;
+          }
         }
       }
     }
@@ -35,6 +81,27 @@
       display: flex;
       gap: 1em;
       flex-direction: column;
+      @include sm {
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      @include md {
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      @include lg {
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
       h4 {
         font-size: 26px;
         font-weight: 400;
@@ -47,6 +114,18 @@
         border: 1px solid $light-color;
         margin-right: 5px;
         transition: 250ms;
+        @include sm {
+          margin-right: 10px;
+          margin-top: 10px;
+        }
+        @include md {
+          margin-right: 10px;
+          margin-top: 10px;
+        }
+        @include lg {
+          margin-right: 10px;
+          margin-top: 10px;
+        }
       }
       .destinations__priceFilter {
         display: flex;
@@ -54,6 +133,27 @@
         flex-direction: column;
         width: 625px;
         margin-top: 50px;
+        @include sm {
+          width: 90%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+        @include md {
+          width: 90%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+        @include lg {
+          width: 90%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
+        }
         h4 {
         }
       }
@@ -63,12 +163,42 @@
       display: flex;
       gap: 2.5em;
       padding: 2.5em 0;
+      @include sm {
+        width: 95%;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+      }
+      @include md {
+        width: 95%;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+      }
+      @include lg {
+        width: 95%;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+      }
       .destinations__search {
         width: 625px;
         border: 1px solid $light-color;
         border-radius: 25px;
         padding: 1em;
         cursor: text;
+        @include sm {
+          width: 90%;
+        }
+        @include md {
+          width: 90%;
+        }
+        @include lg {
+          width: 90%;
+        }
       }
       .destinations__clearFilters {
         background-color: #141414;
@@ -76,6 +206,21 @@
         border-radius: 25px;
         padding: 0.5em 1em;
         transition: 250ms;
+        @include sm {
+          width: 100px;
+          padding: 1em;
+          text-align: center;
+        }
+        @include md {
+          width: 100px;
+          padding: 1em;
+          text-align: center;
+        }
+        @include lg {
+          width: 100px;
+          padding: 1em;
+          text-align: center;
+        }
         &:hover {
           background-color: $light-color;
         }
