@@ -1,4 +1,5 @@
 @import "../../styles/variables.scss";
+@import "../../styles/responsive.scss";
 
 .highlights {
   width: 95%;
@@ -7,23 +8,66 @@
   justify-content: space-between;
   gap: 25px;
   margin: 50px 0 250px 0;
+  @include md {
+    flex-direction: column;
+    margin: 20px 0 150px 0;
+    gap: 10px;
+  }
+  @include sm {
+    flex-direction: column;
+    margin: 20px 0 150px 0;
+    gap: 10px;
+  }
+  @include lg {
+    flex-direction: column;
+    margin: 20px 0 150px 0;
+    gap: 10px;
+  }
   .highlights__box {
     width: 100%;
     height: 85vh;
     display: flex;
     flex-direction: column;
     position: relative;
+    @include md {
+      height: 150px;
+    }
+    @include sm {
+      height: 150px;
+    }
+    @include lg {
+      height: 150px;
+    }
     .highlights__headline {
       font-size: 52px;
       text-transform: capitalize;
       font-weight: 400;
+      @include md {
+        font-size: 26px;
+      }
+      @include sm {
+        font-size: 26px;
+      }
+      @include lg {
+        font-size: 26px;
+      }
     }
   }
-  .highlights__box1, .highlights__box2 {
+  .highlights__box1,
+  .highlights__box2 {
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      @include md {
+        display: none;
+      }
+      @include sm {
+        display: none;
+      }
+      @include lg {
+        display: none;
+      }
     }
     .highlights__link {
       background-color: #fff;
@@ -31,6 +75,16 @@
       border-left: 1px solid #000;
       border-right: 1px solid #000;
       padding: 1.5em 0;
+      @include md {
+        border-top: 1px solid #000;
+      }
+      @include sm {
+        border-top: 1px solid #000;
+      }
+      @include lg {
+        border-top: 1px solid #000;
+      }
+
       .highlights__icon {
         display: flex;
         align-items: center;
@@ -39,19 +93,25 @@
         text-align: start;
         transition: 250ms;
         &:hover {
-          color:$light-color;
+          color: $light-color;
         }
       }
     }
     p {
-        width: 400px;
-        text-align: justify;
-        position: absolute;
-        bottom: 20%;
-        left: 2.5em;
-        font-size: 22px;
-        font-weight: 400;
-        color: #fff;
+      width: 350px;
+      text-align: end;
+      position: absolute;
+      bottom: 20%;
+      right: 2.5em;
+      font-size: 22px;
+      font-weight: 400;
+      @include md {
+        display: none;
+      }
+      @include sm {
+        display: none;
+      }
+      display: none;
     }
   }
 }

@@ -1,3 +1,5 @@
+@import "../../styles//responsive.scss";
+
 .home {
   width: 95%;
   margin: auto;
@@ -5,6 +7,18 @@
     display: flex;
     justify-content: center;
     height: 85vh;
+    @include md {
+      flex-direction: column;
+    }
+    @include sm {
+      flex-direction: column;
+    }
+    @include lg {
+      flex-direction: column;
+    }
+    @include xl {
+      flex-direction: column;
+    }
   }
   .home__info {
     width: 100%;
@@ -12,11 +26,52 @@
     flex-direction: column;
     gap: 60px;
     margin-top: 105px;
+    @include md {
+      align-items: center;
+      justify-content: center;
+      margin-top: 0px;
+    }
+    @include sm {
+      align-items: center;
+      justify-content: center;
+      margin-top: 0px;
+    }
+    @include lg {
+      align-items: center;
+      justify-content: center;
+      margin-top: 0px;
+    }
+    @include xl {
+      align-items: center;
+      justify-content: center;
+      margin-top: 0px;
+    }
+
     .home__headline {
       width: 600px;
       font-size: 92px;
       text-transform: capitalize;
       font-weight: 400;
+      @include md {
+        width: 95%;
+        font-size: 52px;
+        text-align: center;
+      }
+      @include sm {
+        width: 95%;
+        font-size: 52px;
+        text-align: center;
+      }
+      @include lg {
+        width: 95%;
+        font-size: 52px;
+        text-align: center;
+      }
+      @include xl {
+        width: 95%;
+        font-size: 52px;
+        text-align: center;
+      }
     }
     .home__paragraph {
       font-size: 22px;
@@ -51,6 +106,30 @@
   .home__quote {
     display: flex;
     position: relative;
+    @include md {
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 25px;
+    }
+    @include sm {
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 25px;
+    }
+    @include lg {
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 25px;
+    }
+    @include xl {
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 25px;
+    }
     img {
       width: 52px;
       height: 52px;
@@ -59,12 +138,40 @@
       &:nth-child(2) {
         position: absolute;
         left: 30px;
+        @include md {
+          display: none;
+        }
+        @include sm {
+          display: none;
+        }
+        @include lg {
+          display: none;
+        }
+        @include xl {
+          display: none;
+        }
       }
     }
     .home__phrase {
       width: 350px;
       margin-left: 60px;
       text-align: justify;
+      @include md {
+        width: 95%;
+        text-align: center;
+      }
+      @include sm {
+        width: 95%;
+        text-align: center;
+      }
+      @include lg {
+        width: 95%;
+        text-align: center;
+      }
+      @include xl {
+        width: 95%;
+        text-align: center;
+      }
     }
   }
   .home__images {
@@ -74,6 +181,18 @@
     justify-content: center;
     gap: 30px;
     position: relative;
+    @include md {
+      display: none;
+    }
+    @include sm {
+      display: none;
+    }
+    @include lg {
+      display: none;
+    }
+    @include xl {
+      display: none;
+    }
     img {
       width: 350px;
       height: 500px;

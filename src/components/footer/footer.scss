@@ -1,4 +1,5 @@
 @import "../../styles/variables.scss";
+@import "../../styles/responsive.scss";
 
 
 .footer {
@@ -9,14 +10,46 @@
   align-items: center;
   padding-top: 1.5em;
   .footer__top {
-    width: 95%;
+    width: 100%;
     display: flex;
     flex-direction: row;
+    @include md {
+      width: 90%;
+      flex-direction: column;
+    }
+    @include sm {
+      width: 90%;
+      flex-direction: column;
+    }
+    @include lg {
+      width: 90%;
+      flex-direction: column;
+    }
+    @include xl {
+      width: 90%;
+      flex-direction: column;
+    }
     .footer__info {
       width: 50%;
       display: flex;
       flex-direction: column;
       gap: 30px;
+      @include md {
+        width: 90%;
+        
+      }
+      @include sm {
+        width: 90%;
+        
+      }
+      @include lg {
+        width: 90%;
+        
+      }
+      @include xl {
+        width: 90%;
+        
+      }
       .footer__logotype {
         font-family: "mf", sans-serif;
         font-size: 36px;
@@ -24,6 +57,18 @@
       .footer__text {
         width: 400px;
         text-align: justify;
+        @include md {
+          width: 100%;
+        }
+        @include sm {
+          width: 100%;
+        }
+        @include lg {
+          width: 100%;
+        }
+        @include xl {
+          width: 100%;
+        }
       }
     }
     .footer__links {
@@ -31,6 +76,26 @@
       justify-content: center;
       display: flex;
       gap: 10em;
+      @include md {
+       gap: 3em;
+       flex-direction: column;
+       margin-top: 20px;
+      }
+      @include sm {
+        gap: 3em;
+        flex-direction: column;
+        margin-top: 20px;
+      }
+      @include lg {
+        gap: 3em;
+        flex-direction: column;
+        margin-top: 20px;
+       }
+       @include xl {
+         gap: 3em;
+         flex-direction: column;
+         margin-top: 20px;
+       }
       .footer__list {
         display: flex;
         flex-direction: column;
@@ -59,6 +124,18 @@
     justify-content: space-between;
     align-items: center;
     padding: 1.5em 0;
+    @include md {
+      width: 90%;
+    }
+    @include sm {
+      width: 90%;
+    }
+    @include lg {
+      width: 90%;
+    }
+    @include xl {
+      width: 90%;
+    }
     p {
         color: $light-color;
     }

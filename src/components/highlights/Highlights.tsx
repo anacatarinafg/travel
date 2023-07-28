@@ -25,12 +25,9 @@ const Highlights = () => {
       </div>
 
       <div className="highlights__box highlights__box2">
-        <img src="./assets/grad.jpg" alt="destination"></img>
+        <img src="./assets/bg-home.jpg" alt="destination"></img>
         <p className="highlights__text">
-          The Nike Dunk Low is an easy score for your wardrobe. This mid-80s
-          hoops icon returns with super-durable construction and original
-          colours. With ankle padding and rubber traction, this one is a slam
-          dunk.
+          "A journey of a thousand miles begins with a single step." - Lao Tzu
         </p>
         <div className="highlights__link">
           <Link to="/destinations" className="highlights__icon">

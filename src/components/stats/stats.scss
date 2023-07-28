@@ -1,3 +1,5 @@
+@import "../../styles/responsive.scss";
+
 .stats {
   width: 95%;
   display: flex;
@@ -5,6 +7,26 @@
   justify-content: space-between;
   padding: 5.5em 0;
   margin-bottom: 150px;
+  @include md {
+    flex-direction: column;
+    margin-bottom: 50px;
+    padding: 1.5em 0;
+  }
+  @include sm {
+    flex-direction: column;
+    margin-bottom: 50px;
+    padding: 1.5em 0;
+  }
+  @include lg {
+    flex-direction: column;
+    margin-bottom: 50px;
+    padding: 1.5em 0;
+  }
+  @include xl {
+    flex-direction: column;
+    margin-bottom: 50px;
+    padding: 1.5em 0;
+  }
   .stats__box {
     padding: 2.5em;
     box-shadow: grey 0px 0px 0px 2px inset,
@@ -13,15 +35,68 @@
       rgb(255, 255, 255) 30px -30px 0px -3px, grey 30px -30px,
       rgb(255, 255, 255) 40px -40px 0px -3px, grey 40px -40px;
     border-radius: 10px;
+    @include md {
+      box-shadow: none;
+      border: 1px solid #000;
+      width: 400px;
+      height: 200px;
+      margin-top: 10px;
+    }
+    @include sm {
+      box-shadow: none;
+      border: 1px solid #000;
+      width: 400px;
+      height: 200px;
+      margin-top: 10px;
+    }
+    @include lg {
+      box-shadow: none;
+      border: 1px solid #000;
+      width: 400px;
+      height: 200px;
+      margin-top: 10px;
+    }
+    @include xl {
+      box-shadow: none;
+      border: 1px solid #000;
+      width: 400px;
+      height: 200px;
+      margin-top: 10px;
+    }
     .stats__number {
       font-size: 72px;
       text-align: center;
       font-weight: 400;
+      @include md {
+        font-size: 52px;
+        font-size: 600;
+      }
+      @include sm {
+        font-size: 52px;
+        font-size: 600;
+      }
+      @include lg {
+        font-size: 52px;
+        font-size: 600;
+      }
+      @include xl {
+        font-size: 52px;
+        font-size: 600;
+      }
     }
     .stats__text {
       text-align: center;
       font-size: 22px;
       text-transform: capitalize;
+    }
+    @include md {
+      font-size: 16px;
+    }
+    @include sm {
+      font-size: 16px;
+    }
+    @include lg {
+      font-size: 16px;
     }
   }
 }
