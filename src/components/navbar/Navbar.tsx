@@ -9,7 +9,7 @@ const Navbar = () => {
         <ul className="navbar__list">
           <li className="navbar__item">
             <Link to="/" className="navbar__link">
-              Index
+              Home
             </Link>
           </li>
           <li className="navbar__item">

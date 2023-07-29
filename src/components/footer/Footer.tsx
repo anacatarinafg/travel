@@ -21,7 +21,7 @@ const Footer = () => {
             </h4>
             <li className="footer__item">
               <Link to="/" className="footer__link">
-                Index
+                Home
               </Link>
             </li>
             <li className="footer__item">
